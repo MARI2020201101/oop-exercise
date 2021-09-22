@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 public class Exercise20 {
     public static int[] shuffle(int[] arr){
+        if(arr==null||arr.length==0){
+            throw new IllegalArgumentException("not support args");
+        }
+
         for(int i =0;i<arr.length;i++){
             int j = (int) (Math.random()*arr.length);
             int tmp = arr[i];
