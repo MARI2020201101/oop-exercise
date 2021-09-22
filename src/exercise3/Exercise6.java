@@ -9,6 +9,7 @@ class MyPoint{
         this.y=y;
     }
     double getDistance(MyPoint myPoint2){
+        //인스턴스 변수를 사용하기 때문에, static선언이 불가능하다.
         return Math.sqrt(Math.pow((this.x- myPoint2.x),2) + Math.pow((this.y- myPoint2.y),2)) ;
     }
 
