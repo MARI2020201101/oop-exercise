@@ -14,6 +14,7 @@ public class Student {
         System.out.println("이름 : " + s.name);
         System.out.println("총점 : " + s.getTotal());
         System.out.println("평균 : " + s.getAverage());
+        System.out.println(s.info());
     }
     private String name;
     private int ban;
@@ -28,5 +29,19 @@ public class Student {
 
     public float getAverage(){
         return (int)((getTotal()/3.0f+0.05)*10)/10.0f;
+    }
+
+    public Student(){}
+
+    public Student(String name, int ban, int no, int kor, int eng, int math){
+        this.name=name;
+        this.ban=ban;
+        this.no = no;
+        this.kor=kor;
+        this.eng=eng;
+        this.math= math;
+    }
+    public String info(){
+        return String.format("%s,%d,%d,%d,%d,%d,%d,%.1f",name,ban,no,kor,eng,math,getTotal(),getAverage());
     }
 }
